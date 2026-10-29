@@ -24,7 +24,7 @@ erDiagram
         uuid id PK
         uuid user_id FK
         text title "必須 1〜100文字"
-        timestamptz held_at "必開催日時"
+        timestamptz held_at "必須 開催日時"
         text place "任意 〜100文字"
         text memo "任意 〜5000文字"
     }
@@ -68,7 +68,7 @@ erDiagram
 | `event_photos` | 飲み会の写真 | 画像そのものは Storage に置き、ここには場所（パス）だけ持つ。`position` の小さい順に表示 |
 | `people` | 人 | 同姓同名でも別人として登録できる。`note`（例：伊藤先生とSSの伊藤くん）で見分ける |
 | `event_participants` | 飲み会 × 人 | 同じ人を同じ飲み会に二重登録できない |
-| `tags` | 話題タグ | 同じユーザー内で同じ名前は1つ（`AWS` と `aws` も同じ扱い）。*頭の `#` は保存しない(表示時に付ける） |
+| `tags` | 話題タグ | 同じユーザー内で同じ名前は1つ（`AWS` と `aws` も同じ扱い）。先頭の `#` は保存しない（表示時に付ける） |
 | `event_tags` | 飲み会 × タグ | 同じタグを同じ飲み会に二重登録できない |
 
 ### 削除したときの動き
