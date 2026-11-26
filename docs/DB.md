@@ -70,6 +70,7 @@ erDiagram
 | `event_participants` | 飲み会 × 人 | 同じ人を同じ飲み会に二重登録できない |
 | `tags` | 話題タグ | 同じユーザー内で同じ名前は1つ（`AWS` と `aws` も同じ扱い）。先頭の `#` は保存しない（表示時に付ける） |
 | `event_tags` | 飲み会 × タグ | 同じタグを同じ飲み会に二重登録できない |
+| `keepalive` | 停止防止用の1行だけの表（アプリでは使わない） | GitHub Actions が週2回 `pinged_at` を更新する。anon / authenticated からは読み書きできない |
 
 ### 削除したときの動き
 
